@@ -1,35 +1,48 @@
 extends Sprite2D
 
 func _ready():
-	#var num1 = 20
-	#var num2 = "geko" # its immutable
-	#print("Hello from sprite", num1)
+	#var health = 49
+	#var ammo = 10
 	#
-	#var num1 = 10
-	#var num2 = 5
-	#var result = num1 + num2
-	#print(result)
-	#
-	#var vec2_a=Vector2(1,2)
-	#var vec2_b=Vector2(3,4)
-	#var vec2_result = vec2_a + vec2_b
-	#print(vec2_result)
-	#
-	#var array1=[1,2,3]
-	#var array2=[4,5,6]
-	#var merged_array = array1+array2
-	#print(merged_array)
-	#
-	#
-	
-	#var player_inventory = ["sword", "sheild"]
-	#var chest_loot = ["gold", "potion"]
-	#player_inventory += chest_loot
-	#print(player_inventory)
-	var num1 = 10
-	var num2 = 7
-	var results_num = num1 * num2
-	print(results_num)
+	#print(health>50)
+	#if health >50 and ammo >0:
+		#print("Your ready to fight!!")
+	#else:
+		#print("You need health or ammo to fight...")
+	#var has_key=false
+	#var is_door_unlocked=false
+	#if has_key or is_door_unlocked:
+		#print("You can enter the room")
+	#else:
+		#print("You need a key to unlock the door")
+	#var enemy_alive = true
+	#if not enemy_alive:
+		#print("The the enemy is defeated")
+	#else:
+		#print("Enemy is still alive")
+		
+	#var has_sword = true
+	#var has_sheild = false
+	#var is_safe = not has_sword and has_sheild or has_sword
+	#if is_safe:
+		#print("you are safe. you can survive")
+	#else:
+		#print("you are in danger")
+		
+	#var inventory = ["sword", "sheild", "potion"]
+	#if "sword" in inventory:
+		#print("You hav a sword!")
+	#else:
+		#print("you don't have a sword")
+	#var level=10
+	#if level==5:
+		#print("You have reached level 5")
+	#var score = 100
+	#if score !=0:
+		#print("keep going!")
+	var player_health = 45
+	if player_health >= 50:
+		print("Low health, you need to find a potion!")
 	
 	
 	
