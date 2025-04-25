@@ -1,49 +1,35 @@
 extends Sprite2D
 
 func _ready():
-	#var health = 49
-	#var ammo = 10
-	#
-	#print(health>50)
-	#if health >50 and ammo >0:
-		#print("Your ready to fight!!")
+	#var conditon = false
+	#if conditon or check_function():
+		#print("either condition is True!")
 	#else:
-		#print("You need health or ammo to fight...")
-	#var has_key=false
-	#var is_door_unlocked=false
-	#if has_key or is_door_unlocked:
-		#print("You can enter the room")
+		#print("Neither is true")
+
+	#var my_array = []
+	#var index =1
+	#print(my_array.size())
+	#if index <my_array.size() and my_array[index] == 10:
+		#print("Found 10 at index 1")
 	#else:
-		#print("You need a key to unlock the door")
-	#var enemy_alive = true
-	#if not enemy_alive:
-		#print("The the enemy is defeated")
-	#else:
-		#print("Enemy is still alive")
-		
-	#var has_sword = true
-	#var has_sheild = false
-	#var is_safe = not has_sword and has_sheild or has_sword
-	#if is_safe:
-		#print("you are safe. you can survive")
-	#else:
-		#print("you are in danger")
-		
-	#var inventory = ["sword", "sheild", "potion"]
-	#if "sword" in inventory:
-		#print("You hav a sword!")
-	#else:
-		#print("you don't have a sword")
-	#var level=10
-	#if level==5:
-		#print("You have reached level 5")
-	#var score = 100
-	#if score !=0:
-		#print("keep going!")
-	var player_health = 45
-	if player_health >= 50:
-		print("Low health, you need to find a potion!")
+		#print("Index out of bound error")
+#
+#func check_function():
+	#print("The check functon has been called")
+	#return true
 	
+	#var inventory = ["sword", "sheild"]
+	#if inventory:
+		#print("you have items in your inventory")
+	#else:
+		#print("You have nothing")
+		
+	var enemies_to_spawn=[Vector2(100,200), Vector2(300,400)]
+	if enemies_to_spawn:
+		print("Enemies are waiting to be spawn")
+	else:
+		print("All enemies have been spawned")
 	
 	
 func _process(delta: float) -> void:
