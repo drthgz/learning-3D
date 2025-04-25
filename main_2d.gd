@@ -4,5 +4,5 @@ func _ready():
 	print("hello from main")
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
