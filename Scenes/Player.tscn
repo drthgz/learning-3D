@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0e3eodrs2lg"]
+
+[ext_resource type="Script" uid="uid://cpysdodxxtt6o" path="res://Scripts/player.gd" id="1_rpqav"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qbkls"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rpqav"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_rpqav")
+mouse_sensititvity = 0.04
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_qbkls")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_rpqav")
+
+[node name="CameraPivot" type="Marker3D" parent="."]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
