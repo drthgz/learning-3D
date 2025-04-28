@@ -1,15 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ur038e0ytv2e"]
+[gd_scene load_steps=11 format=3 uid="uid://ur038e0ytv2e"]
 
 [ext_resource type="PackedScene" uid="uid://c0e3eodrs2lg" path="res://Scenes/Player.tscn" id="1_fhp0g"]
+[ext_resource type="Script" uid="uid://dowm0eu64ekn8" path="res://Scripts/terrain.gd" id="1_ofn1o"]
+[ext_resource type="Script" uid="uid://dilbjihtow4pb" path="res://Scripts/village.gd" id="1_tmqdu"]
+[ext_resource type="PackedScene" uid="uid://sho5k1hydth" path="res://Scenes/importedVillage.tscn" id="4_vn26p"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_jrr5k"]
-albedo_color = Color(0, 0.601015, 0.288536, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_q5e70"]
-size = Vector2(12, 10)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pxdql"]
-size = Vector3(1.15771, 0.0228882, 0.995239)
+[sub_resource type="BoxShape3D" id="BoxShape3D_vn26p"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_fhp0g"]
 turbidity = 0.0
@@ -27,17 +23,18 @@ ambient_light_color = Color(0.220885, 0.418192, 0.560582, 1)
 
 [sub_resource type="Compositor" id="Compositor_ofn1o"]
 
-[node name="Level" type="Node3D"]
+[node name="village" type="Node3D"]
+script = ExtResource("1_tmqdu")
+initial_terrain_type = "desert"
 
 [node name="Terrain" type="StaticBody3D" parent="."]
+script = ExtResource("1_ofn1o")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
-material_override = SubResource("ORMMaterial3D_jrr5k")
-mesh = SubResource("PlaneMesh_q5e70")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.0570679, -0.0238037)
-shape = SubResource("BoxShape3D_pxdql")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0570679, -0.0238037)
+shape = SubResource("BoxShape3D_vn26p")
 
 [node name="Player" parent="Terrain" instance=ExtResource("1_fhp0g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62097, 1.05737, -1.8741)
@@ -54,3 +51,6 @@ directional_shadow_split_1 = 0.2
 environment = SubResource("Environment_fbxce")
 camera_attributes = SubResource("CameraAttributesPractical_fhp0g")
 compositor = SubResource("Compositor_ofn1o")
+
+[node name="Node3D" parent="." instance=ExtResource("4_vn26p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.241869, 8.28263, 11.9137)

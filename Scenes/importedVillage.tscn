@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://sho5k1hydth"]
+[gd_scene load_steps=2 format=3 uid="uid://sho5k1hydth"]
+
+[ext_resource type="Script" uid="uid://4efl1kmtio1t" path="res://Scripts/imported_village.gd" id="1_gmd0c"]
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_gmd0c")

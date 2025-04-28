@@ -15,6 +15,10 @@ run/main_scene="uid://ur038e0ytv2e"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+LevelManager="*res://Scripts/level_manager.gd"
+
 [input]
 
 move_left={
