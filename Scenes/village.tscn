@@ -25,7 +25,6 @@ ambient_light_color = Color(0.220885, 0.418192, 0.560582, 1)
 
 [node name="village" type="Node3D"]
 script = ExtResource("1_tmqdu")
-initial_terrain_type = "desert"
 
 [node name="Terrain" type="StaticBody3D" parent="."]
 script = ExtResource("1_ofn1o")

@@ -2,11 +2,12 @@ extends Node3D
 
 @export var initial_terrain_type = "grass"
 @onready var terrain_node = $Terrain  # Reference to existing terrain
-
 func _ready() -> void:
 	# Wait one frame to ensure everything loads
 	await get_tree().process_frame
 	update_terrain(initial_terrain_type)
+	# Call this anywhere to change terrain:
+	LevelManager.change_terrain(terrain_node,"grass")
 
 func update_terrain(type: String):
 	var mesh_instance = terrain_node.get_node_or_null("MeshInstance3D")

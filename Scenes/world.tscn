@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=3 uid="uid://de7mdtkmg0y0b"]
+
+[ext_resource type="PackedScene" uid="uid://c0e3eodrs2lg" path="res://Scenes/Player.tscn" id="1_a02cp"]
+[ext_resource type="Script" uid="uid://dkilor2rvyw0x" path="res://Scripts/world_manager.gd" id="1_go701"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yp4wr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a02cp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_go701"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5a7ea"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_8j60k"]
+
+[sub_resource type="Sky" id="Sky_fo5ed"]
+sky_material = SubResource("PhysicalSkyMaterial_8j60k")
+
+[sub_resource type="Environment" id="Environment_5ukr8"]
+background_mode = 2
+sky = SubResource("Sky_fo5ed")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_o06y3"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_go701")
+
+[node name="CenterTerrain" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CenterTerrain"]
+shape = SubResource("BoxShape3D_yp4wr")
+
+[node name="EastTerrain" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EastTerrain"]
+shape = SubResource("BoxShape3D_a02cp")
+
+[node name="WestTerrain" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WestTerrain"]
+shape = SubResource("BoxShape3D_go701")
+
+[node name="NorthTerrain" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NorthTerrain"]
+shape = SubResource("BoxShape3D_5a7ea")
+
+[node name="Player" parent="." instance=ExtResource("1_a02cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.684, 12.2502, 2.9208)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5ukr8")
+camera_attributes = SubResource("CameraAttributesPractical_o06y3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.00277424, 8.72651, 0.0247993)
