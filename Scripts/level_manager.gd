@@ -27,7 +27,7 @@ func generate_terrain(parent_node: Node3D, type: String) -> StaticBody3D:
 	var config = terrain_types[type]
 	
 	var terrain = StaticBody3D.new()
-	terrain.name = "Terrain"  # Fixed typo in name
+	terrain.name = "Terrain"
 	
 	# Mesh setup
 	var mesh = PlaneMesh.new()
