@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://de7mdtkmg0y0b"]
 
 [ext_resource type="PackedScene" uid="uid://c0e3eodrs2lg" path="res://Scenes/Player.tscn" id="1_a02cp"]
-[ext_resource type="Script" uid="uid://dkilor2rvyw0x" path="res://Scripts/world_manager.gd" id="1_go701"]
+[ext_resource type="Script" uid="uid://dj0vw86cjeeto" path="res://Scripts/world_generator.gd" id="1_go701"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yp4wr"]
 
