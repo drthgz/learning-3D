@@ -10,12 +10,12 @@
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_fhp0g"]
 turbidity = 0.0
 
-[sub_resource type="Sky" id="Sky_ofn1o"]
+[sub_resource type="Sky" id="Sky_vn26p"]
 sky_material = SubResource("PhysicalSkyMaterial_fhp0g")
 
 [sub_resource type="Environment" id="Environment_fbxce"]
 background_mode = 2
-sky = SubResource("Sky_ofn1o")
+sky = SubResource("Sky_vn26p")
 ambient_light_source = 3
 ambient_light_color = Color(0.220885, 0.418192, 0.560582, 1)
 

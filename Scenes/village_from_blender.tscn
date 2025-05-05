@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhjs0b3rhos6q"]
+
+[ext_resource type="PackedScene" uid="uid://cf4slj3kcb4iu" path="res://Assets/blenderScenes/village.blend" id="1_8pefi"]
+[ext_resource type="PackedScene" uid="uid://c0e3eodrs2lg" path="res://Scenes/Player.tscn" id="2_sijml"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_8pefi"]
+turbidity = 0.0
+
+[sub_resource type="Sky" id="Sky_ofn1o"]
+sky_material = SubResource("PhysicalSkyMaterial_8pefi")
+
+[sub_resource type="Environment" id="Environment_sijml"]
+background_mode = 2
+sky = SubResource("Sky_ofn1o")
+ambient_light_source = 3
+ambient_light_color = Color(0.220885, 0.418192, 0.560582, 1)
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_bffww"]
+
+[sub_resource type="Compositor" id="Compositor_p1wdk"]
+
+[node name="villageFromBlender" type="Node3D"]
+
+[node name="village" parent="." instance=ExtResource("1_8pefi")]
+
+[node name="Player" parent="." instance=ExtResource("2_sijml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8776, 1.00001, -33.4096)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.309548, 0.950884, 0, -0.950884, -0.309548, -5.6157, 11.2908, 0)
+light_color = Color(1, 1, 0.796078, 1)
+light_energy = 3.907
+light_indirect_energy = 4.771
+light_volumetric_fog_energy = 2.121
+directional_shadow_split_1 = 0.2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sijml")
+camera_attributes = SubResource("CameraAttributesPractical_bffww")
+compositor = SubResource("Compositor_p1wdk")
