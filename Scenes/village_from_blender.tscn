@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bhjs0b3rhos6q"]
 
-[ext_resource type="PackedScene" uid="uid://cf4slj3kcb4iu" path="res://Assets/blenderScenes/village.blend" id="1_8pefi"]
+[ext_resource type="PackedScene" uid="uid://2vbpbtm0e42r" path="res://Assets/blenderScenes/village.blend" id="1_8pefi"]
 [ext_resource type="PackedScene" uid="uid://c0e3eodrs2lg" path="res://Scenes/Player.tscn" id="2_sijml"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_8pefi"]
@@ -28,11 +28,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8776, 1.00001, -33.4096)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.309548, 0.950884, 0, -0.950884, -0.309548, -5.6157, 11.2908, 0)
-light_color = Color(1, 1, 0.796078, 1)
-light_energy = 3.907
-light_indirect_energy = 4.771
-light_volumetric_fog_energy = 2.121
-directional_shadow_split_1 = 0.2
+light_color = Color(0.828248, 0.90101, 0.960663, 1)
+light_energy = 1.1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_sijml")
