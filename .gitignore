@@ -4,3 +4,6 @@
 /addons
 /Assets/placeHolderImages
 /Assets/blenderScenes/*.blend[0-9]
+/TPC*
+.vscode
+*.uid

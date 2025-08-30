@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://br2o4avjwog77"]
 
 [ext_resource type="Script" uid="uid://rc8xxvr3rl24" path="res://Scripts/dynamic_terrain.gd" id="1_5qaao"]
-[ext_resource type="PackedScene" uid="uid://c0e3eodrs2lg" path="res://Scenes/Player.tscn" id="2_b8eou"]
+[ext_resource type="PackedScene" uid="uid://blerxf6vn7d4m" path="res://Scenes/character_body_3d.tscn" id="2_b8eou"]
 
 [node name="dynamicTerrain" type="Node3D"]
 script = ExtResource("1_5qaao")
 
-[node name="Player" parent="." instance=ExtResource("2_b8eou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37848, 0)
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_b8eou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25062, 0)

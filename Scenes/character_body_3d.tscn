@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://blerxf6vn7d4m"]
+
+[ext_resource type="Script" uid="uid://brjnfdtoohi47" path="res://TPC-demo/PlayerCharacter.gd" id="1_fn5od"]
+[ext_resource type="PackedScene" uid="uid://wmf2eu0uuhrg" path="res://addons/third-person-camera/third_person_camera/ThirdPersonCamera.tscn" id="2_gfjpw"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7hjes"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_006hf"]
+size = Vector3(2.1, 1.5, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l77vy"]
+size = Vector3(1, 2.03217, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_fn5od")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_7hjes")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.00118677, 0.999999, 0, -0.999999, -0.00118677, 0, 0.273003, -0.261137)
+mesh = SubResource("PrismMesh_006hf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00430298, 0)
+shape = SubResource("BoxShape3D_l77vy")
+
+[node name="ThirdPersonCamera" parent="." instance=ExtResource("2_gfjpw")]
+distance_from_pivot = 3.0
+pivot_offset = Vector2(0, 1)
+current = true
+follow_target = 2
