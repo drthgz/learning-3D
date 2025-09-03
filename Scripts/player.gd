@@ -26,6 +26,15 @@ func _ready():
 	spring_arm.add_child(camera)
 	camera.current = true
 
+	# Add flashlight (SpotLight3D) to camera pivot
+	var flashlight = SpotLight3D.new()
+	flashlight.light_color = Color(1, 1, 0.9)
+	flashlight.energy = 2.0
+	flashlight.spot_angle = 45
+	flashlight.position = Vector3(0, 1.5, 1.5)
+	flashlight.rotation_degrees = Vector3(-20, 0, 0)
+	camera_pivot.add_child(flashlight)
+
 	# Configure spring arm
 	spring_arm.spring_length = camera_distance
 	spring_arm.position.y = camera_height
